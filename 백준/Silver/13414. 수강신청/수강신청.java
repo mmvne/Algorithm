@@ -28,9 +28,10 @@ public class Main {
 
         list.sort(Comparator.comparingInt(map::get));
 
-        for (int i = 0; i < Math.min(K, list.size()); i++) {
+        // 수강신청 학생이 더 작을수도 있으니 최소값 설정
+        for (int i = 0; i < Math.min(K, list.size()); i++) { 
             bw.write(list.get(i));
-            bw.newLine();
+            bw.newLine(); // '/n' 이랑 같음
         }
 
         bw.flush();
